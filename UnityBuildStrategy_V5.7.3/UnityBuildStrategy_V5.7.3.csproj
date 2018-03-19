@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D181C56D-DE95-4269-A7CB-EAC7EB36F14E}</ProjectGuid>
+    <ProjectGuid>{B8D2657F-1EED-45AE-A32D-2EB0E6676625}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UnityBuildStrategyDemo</RootNamespace>
-    <AssemblyName>UnityBuildStrategyDemo</AssemblyName>
+    <RootNamespace>UnityBuildStrategy_V5._7._3</RootNamespace>
+    <AssemblyName>UnityBuildStrategy_V5.7.3</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -80,12 +80,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoggerDependencyTests.cs" />
-    <Compile Include="StringAppender.cs" />
+    <Compile Include="DynamicDependencyTests573.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Unity_V5.7.3\Unity_V5.7.3.csproj">
+      <Project>{1e6dc4fb-5eb5-4eed-8b2e-c8a4a38de687}</Project>
+      <Name>Unity_V5.7.3</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

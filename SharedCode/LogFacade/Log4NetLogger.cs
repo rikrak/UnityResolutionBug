@@ -16,7 +16,7 @@ namespace UnityBuildStrategyDemo.LogFacade
             _log = log;
         }
 
-        internal ILog LogInstance => _log;
+        public ILog LogInstance => _log;
 
         #endregion
 

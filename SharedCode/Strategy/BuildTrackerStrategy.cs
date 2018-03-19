@@ -5,8 +5,11 @@ namespace UnityBuildStrategyDemo.Strategy
 {
     public class BuildTrackerStrategy : BuilderStrategy
     {
-
+#if UNITY_5_5_0
+        public override object PreBuildUp(IBuilderContext context)
+#else
         public override void PreBuildUp(IBuilderContext context)
+#endif
         {
             IBuildTrackerPolicy policy = BuildTracker.GetPolicy(context);
             if (policy == null)
@@ -15,9 +18,16 @@ namespace UnityBuildStrategyDemo.Strategy
             }
 
             policy.BuildKeys.Push(context.BuildKey);
+#if UNITY_5_5_0
+            return null;
+#endif
         }
 
+#if UNITY_5_5_0
+        public override void PostBuildUp(IBuilderContext context, object pre=null)
+#else
         public override void PostBuildUp(IBuilderContext context)
+#endif
         {
             IBuildTrackerPolicy policy = BuildTracker.GetPolicy(context);
             if ((policy != null) && (policy.BuildKeys.Count > 0))

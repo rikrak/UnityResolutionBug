@@ -1,11 +1,14 @@
 ﻿using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Unity;
+using UnityBuildStrategyDemo.LogFacade;
+using UnityBuildStrategyDemo.Strategy;
+using UnityBuildStrategyDemo.Stub;
 
-namespace UnityBuildStrategyDemo
+namespace UnityBuildStrategyDemo.V550
 {
     [TestClass]
-    public class DynamicDependencyTests
+    public class DynamicDependencyTests550
     {
         private UnityContainer _target;
 

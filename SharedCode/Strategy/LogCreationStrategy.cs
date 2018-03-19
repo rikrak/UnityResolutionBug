@@ -12,7 +12,11 @@ namespace UnityBuildStrategyDemo.Strategy
     {
         public bool IsPolicySet { get; private set; }
 
+#if UNITY_5_5_0
+        public override object PreBuildUp(IBuilderContext context)
+#else
         public override void PreBuildUp(IBuilderContext context)
+#endif
         {
             Type typeToBuild = context.BuildKey.Type;
             if (typeof(ILog) == typeToBuild)
@@ -26,9 +30,16 @@ namespace UnityBuildStrategyDemo.Strategy
                     this.IsPolicySet = true;
                 }
             }
+#if UNITY_5_5_0
+            return null;
+#endif
         }
 
+#if UNITY_5_5_0
+        public override void PostBuildUp(IBuilderContext context, object pre = null)
+#else
         public override void PostBuildUp(IBuilderContext context)
+#endif
         {
             if (this.IsPolicySet)
             {

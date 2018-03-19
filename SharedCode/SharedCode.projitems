@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>8baec9df-c20f-48fc-b8e5-290b01c7fd09</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SharedCode</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)LogFacade\ILogFacade.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LogFacade\Log4NetLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LogFacade\LogLevel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Strategy\BuildTracker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Strategy\BuildTrackerPolicy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Strategy\BuildTrackerStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Strategy\IBuildTrackerPolicy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Strategy\LogBuildPlanPolicy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Strategy\LogCreationExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Strategy\LogCreationStrategy.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stub\ClassWithIndirectLogFacadeDependency.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stub\ClassWithLogDependency.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Stub\ClassWithLogFacadeDependency.cs" />
+  </ItemGroup>
+</Project>
