@@ -58,7 +58,7 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Unity.Abstractions, Version=3.3.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.Abstractions.3.3.0\lib\net47\Unity.Abstractions.dll</HintPath>
+      <HintPath>..\packages\Unity.5.7.3\lib\net47\Unity.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Configuration, Version=5.2.1.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.5.7.3\lib\net47\Unity.Configuration.dll</HintPath>
@@ -71,9 +71,6 @@
     </Reference>
     <Reference Include="Unity.Interception.Configuration, Version=5.1.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.5.7.3\lib\net47\Unity.Interception.Configuration.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.log4net, Version=1.0.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
-      <HintPath>..\packages\Unity.log4net.1.0.1\lib\net47\Unity.log4net.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RegistrationByConvention, Version=2.1.5.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\Unity.5.7.3\lib\net47\Unity.RegistrationByConvention.dll</HintPath>
@@ -91,7 +88,6 @@
     <Compile Include="Strategy\IBuildTrackerPolicy.cs" />
     <Compile Include="LogFacade\ILogFacade.cs" />
     <Compile Include="Stub\ClassWithLogDependency.cs" />
-    <Compile Include="Log4NetFixture.cs" />
     <Compile Include="LogFacade\Log4NetLogger.cs" />
     <Compile Include="Strategy\LogBuildPlanPolicy.cs" />
     <Compile Include="Strategy\LogCreationExtension.cs" />
